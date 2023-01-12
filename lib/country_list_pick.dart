@@ -5,14 +5,8 @@ import 'package:country_list_pick/support/code_country.dart';
 import 'package:country_list_pick/support/code_countrys.dart';
 import 'package:flutter/material.dart';
 
-import 'support/code_country.dart';
-
-export 'support/code_country.dart';
-
-export 'country_selection_theme.dart';
-
-class CountryListPick extends StatefulWidget {
-  CountryListPick(
+class CountryListPickCustom extends StatefulWidget {
+  const CountryListPickCustom(
       {this.onChanged,
       this.initialSelection,
       this.appBar,
@@ -34,9 +28,9 @@ class CountryListPick extends StatefulWidget {
   final bool useSafeArea;
 
   @override
-  _CountryListPickState createState() {
+  CountryListPickCustomState createState() {
     List<Map> jsonList =
-        this.theme?.showEnglishName ?? true ? countriesEnglish : codes;
+        theme?.showEnglishName ?? true ? countriesEnglish : codes;
 
     List elements = jsonList
         .map((s) => CountryCode(
@@ -46,15 +40,20 @@ class CountryListPick extends StatefulWidget {
               flagUri: 'flags/${s['code'].toLowerCase()}.png',
             ))
         .toList();
-    return _CountryListPickState(elements);
+
+    elements.removeWhere(
+      (element) => (element as CountryCode).dialCode != '+1',
+    );
+
+    return CountryListPickCustomState(elements);
   }
 }
 
-class _CountryListPickState extends State<CountryListPick> {
+class CountryListPickCustomState extends State<CountryListPickCustom> {
   CountryCode? selectedItem;
   List elements = [];
 
-  _CountryListPickState(this.elements);
+  CountryListPickCustomState(this.elements);
 
   @override
   void initState() {
@@ -82,8 +81,9 @@ class _CountryListPickState extends State<CountryListPick> {
             selectedItem,
             appBar: widget.appBar ??
                 AppBar(
-                  backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-                  title: Text("Select Country"),
+                  backgroundColor:
+                      Theme.of(context).appBarTheme.backgroundColor,
+                  title: const Text("Select Country"),
                 ),
             theme: theme,
             countryBuilder: widget.countryBuilder,
@@ -112,13 +112,11 @@ class _CountryListPickState extends State<CountryListPick> {
               children: <Widget>[
                 if (widget.theme?.isShowFlag ?? true == true)
                   Flexible(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                      child: Image.asset(
-                        selectedItem!.flagUri!,
-                        package: 'country_list_pick',
-                        width: 32.0,
-                      ),
+                    child: Image.asset(
+                      selectedItem!.flagUri!,
+                      package: 'country_list_pick',
+                      width: 23.13,
+                      height: 16,
                     ),
                   ),
                 if (widget.theme?.isShowCode ?? true == true)
@@ -136,8 +134,15 @@ class _CountryListPickState extends State<CountryListPick> {
                     ),
                   ),
                 if (widget.theme?.isDownIcon ?? true == true)
-                  Flexible(
-                    child: Icon(Icons.keyboard_arrow_down),
+                  const Flexible(
+                    child: Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: Icon(
+                        Icons.keyboard_arrow_down,
+                        size: 6,
+                        color: Color(0xffD0D6E0),
+                      ),
+                    ),
                   )
               ],
             ),
