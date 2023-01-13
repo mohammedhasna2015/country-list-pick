@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="468c5ca9-df20-4f55-9b95-a3a939de35ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/country_list_pick.iml" beforeDir="false" afterPath="$PROJECT_DIR$/country_list_pick.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/country_list_pick.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/country_list_pick.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-    </list>
+    <list default="true" id="468c5ca9-df20-4f55-9b95-a3a939de35ae" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,22 +42,15 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="123" y="247" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600484644986">
-      <screen x="0" y="23" width="1920" height="1124" />
-    </state>
-    <state x="123" y="247" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1600484644986" />
-    <state x="248" y="100" key="CommitChangelistDialog2" timestamp="1600488956353">
-      <screen x="0" y="23" width="1920" height="1124" />
-    </state>
-    <state x="248" y="100" key="CommitChangelistDialog2/0.23.1920.1124@0.23.1920.1124" timestamp="1600488956353" />
-    <state x="160" y="224" key="SettingsEditor" timestamp="1600484159641">
-      <screen x="0" y="23" width="1920" height="1124" />
-    </state>
-    <state x="160" y="224" key="SettingsEditor/0.23.1920.1124@0.23.1920.1124" timestamp="1600484159641" />
-    <state x="100" y="123" width="1117" height="924" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1600486921676">
-      <screen x="0" y="23" width="1920" height="1124" />
-    </state>
-    <state x="100" y="123" width="1117" height="924" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1920.1124@0.23.1920.1124" timestamp="1600486921676" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
